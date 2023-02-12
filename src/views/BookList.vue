@@ -30,7 +30,7 @@
 <script setup>
 import NavBar from '@/components/global/NavBar.vue';
 import { getBookList, getBookDetail } from "@/components/api/book.js";
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted } from "vue";
 const Data = ref([]);
 onMounted(() => {
   getBookList()
@@ -42,15 +42,4 @@ onMounted(() => {
       console.log("handle error =>", error);
     });
 });
-const getId = (e) => {
-  console.log(e);
-};
-
-// return {
-//   Data, getId
-// };
-// export default {
-//   setup() {
-//   },
-// };
 </script>

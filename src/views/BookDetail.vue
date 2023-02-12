@@ -13,8 +13,8 @@
         <span class="text-red-600">{{ errors.author }}</span>
       </label>
       <label class="block">
-        <span>作者</span>
-        <Field class="form-input" v-model=Data.description rows="5" :disabled='readonly' name="description"></Field>
+        <span>備註</span>
+        <Field name="description"><textarea class="form-input" v-model="Data.description" rows="5" :disabled='readonly' name="description"></textarea></Field>
         <span class="text-red-600">{{ errors.description }}</span>
       </label>
       <div class="flex justify-center">

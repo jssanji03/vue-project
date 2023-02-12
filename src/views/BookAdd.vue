@@ -1,5 +1,5 @@
 <template>
-    <BackNav msg="新增書本"></BackNav>
+    <BackNav item="新增書本"></BackNav>
     <div class="container max-w-4xl mx-auto">
         <Form @submit="onSubmit" :validation-schema="schema" v-slot="{ errors }">
             <div class="grid grid-cols-1 gap-6 text-start p-8">
@@ -15,7 +15,7 @@
                 </label>
                 <label class="block">
                     <span>備註</span>
-                    <Field class="form-input" v-model="Data.description" rows="5" name="description"></Field>
+                    <Field name="description"><textarea class="form-input" v-model="Data.description" rows="5" name="description"></textarea></Field>
                     <span class="text-red-600">{{ errors.description }}</span>
                 </label>
             </div>
