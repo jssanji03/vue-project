@@ -9,9 +9,30 @@
   text-align: center;
   color: #2c3e50;
 }
-
+nav {
+  padding: 30px;
+}
 @layer components {
   .btn {
-    @apply flex-none w-10 h-10 bg-white hover:text-amber-500 hover:bg-amber-300 rounded-lg hover:border-amber-500 shadow-md border;
+    @apply flex-none w-10 h-10 bg-white hover:text-white hover:bg-red-300 rounded-lg hover:border-amber-500 shadow-md border;
   }
+  .formBtn {
+    @apply flex-none w-40 h-10 rounded-3xl shadow-md hover:text-white text-center;
+  }
+}
+@layer base {
+  input.form-input {
+    @apply mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-700
+      focus:ring-0 focus:border-black;
+  }
+  textarea.form-input {
+    @apply mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-700
+      focus:ring-0 focus:border-black;
+  }
+}
+a:hover {
+  cursor: pointer;
+}
+input:read-only {
+  @apply bg-gray-200;
 }

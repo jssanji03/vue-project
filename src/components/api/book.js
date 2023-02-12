@@ -5,4 +5,6 @@ const bookRequest = axios.create({
 })
 
 export const getBookList = () => bookRequest.get('/books/')
-// export const postUserLogout = data => userRequest.post('/signOut', data)
+export const getBookDetail = data => bookRequest.get(`/books/${data}`);
+export const postBookList = data => bookRequest.post('/books/', data);
+export const patchBookDetail = (data,msg) => bookRequest.patch(`/books/${data}`,msg);
