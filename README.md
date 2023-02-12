@@ -8,7 +8,7 @@
 ## 專案架構
 - 使用 Vue3 + Composition Api
 
-<img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/index.png?raw=true" width="500px">
+<img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/lib.png?raw=true" width="500px">
 
 - main.js 為網頁進入點，全站共用的 Library 在此引入。
 
@@ -34,8 +34,6 @@
 <img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/index.png?raw=true" width="500px">
 
 - 進入頁面後直接載入 Api 看到畫面。
-
-<img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/index.png?raw=true" width="500px">
 
 ## Book Detail
 
