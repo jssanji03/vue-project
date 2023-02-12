@@ -55,7 +55,9 @@
 ## Book Add
 
 <img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/add.png?raw=true" width="500px">
-<img src="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/add.png?raw=true" width="500px">
+<img src ="https://github.com/jssanji03/vue-project/blob/master/public/tempPic/put-2.png?raw=true" width="500px">
+
+
 - 使用 vee-validate 做驗證有沒有值, 有值就跳出 Success！ 並轉跳頁面至 list。
 
 ## Library
