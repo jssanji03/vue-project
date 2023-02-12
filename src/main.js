@@ -18,9 +18,8 @@ import './style/index.css'
 // 定義驗證規則
 
 defineRule('required', required);
-defineRule('email', email);
-defineRule('min', min);
-
+// defineRule('email', email);
+// defineRule('min', min);
 // 設定 vee-validate 全域規則
 configure({
  generateMessage: localize({ zh_TW: zhTW }), // 載入繁體中文語系
