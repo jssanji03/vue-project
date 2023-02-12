@@ -1,7 +1,7 @@
 <template>
   <BackNav :item="title" num="1" @push="get"></BackNav>
   <div class="container max-w-4xl mx-auto">
-    <Form @submit.prevent="onSubmit" class="grid grid-cols-1 gap-6 text-start p-8" :validation-schema="schema" v-slot="{ errors }">
+    <Form @submit="onSubmit" class="grid grid-cols-1 gap-6 text-start p-8" :validation-schema="schema" v-slot="{ errors }">
       <label class="block">
         <span>名稱</span>
         <Field type="text" class="form-input" placeholder="名稱" v-model=Data.title :disabled='readonly' name="title"/>
@@ -18,7 +18,7 @@
         <span class="text-red-600">{{ errors.description }}</span>
       </label>
       <div class="flex justify-center">
-        <button class="formBtn bg-white border border-gray-400 hover:bg-gray-300 mr-8" v-show="show" @click="exit">取消</button>
+        <button class="formBtn bg-white border border-gray-400 hover:bg-gray-300 mr-8" v-show="show">取消</button>
         <button class="formBtn bg-red-100 hover:bg-red-300" @click="PatchData" v-show="show">修改</button>
       </div>
     </Form>
@@ -35,7 +35,7 @@ import { useRoute } from 'vue-router'
 import { useRouter } from 'vue-router';
 
 export default {
-  components: { BackNav, Form, Field },
+  components: { BackNav, Form },
   setup() {
     const Data = ref([]);
     const title = ref('')
@@ -61,18 +61,13 @@ export default {
       show.value = !text;
     }
     function PatchData() {
-      console.log(id);
       patchBookDetail(id, Data.value)
         .then(res => {
           console.log(router);
-          onSubmit()
         })
         .catch(error => {
           console.log("handle error =>", error);
         });
-    }
-    function exit() {
-      console.log("test");
     }
     const schema = {
       title: 'required',
@@ -86,7 +81,7 @@ export default {
       });
     };
     return {
-      Data, readonly, title, get, show, PatchData, onSubmit
+      Data, readonly, title, get, show, PatchData, onSubmit, schema
     }
   }
 };
